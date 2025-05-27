@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            width:300px;
+            height:200px;
+
+            color: white;
+            text-align: center;
+
+            padding-top:30px;
+            border-radius: 8px;
+
+            font-family : 'GumiRomanceTTF', sans-serif;
+
+            background-image : url('https://blog.kakaocdn.net/dn/1Tg4y/btqDurHhxax/rFjK7yUIuO0fwMsZsvubU0/img.jpg');
+            background-size: cover;
+        }
+
+        .body h5 {
+            color: #755e42; 
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 20px auto 0px auto;
+        }
+
+        @font-face {
+            font-family: 'GumiRomanceTTF';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/GumiRomanceTTF.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="body">
+            <h1>로그인페이지</h1>
+            <h5>아이디, 비밀번호를 입력해주세요</h5>
+        </div>
+        <p>ID : <input type="text" id="ID" placeholder="아이디를 입력하세요"></p>
+        <p>PW : <input type="password" id="pw" placeholder="비밀번호를 입력하세요"></p>
+        <button onclick="login()">로그인하기</button>
+        <p>
+            <a href="#">아이디찾기</a> / <a href="#">비밀번호찾기</a>
+        </p>
+    </div>
+
+    <script>
+        function login() {
+            const id = document.getElementById("ID").value;
+            const pw = document.getElementById("pw").value;
+
+            const validId = "admin";
+            const validPw = "1234";
+
+            if (id === validId && pw === validPw) {
+                window.location.href = "home.html";
+                //객체의 속성, 뒤로가기 버튼을 누르면 이전 페이지로 이동O <-> replace : 새로운 페이지로 덮어씌우기, 이전페이지 이동 X
+            }
+            else {
+                alert("아이디 또는 비밀번호가 잘못되었습니다.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+#nav-bar {
+    background-color: rgb(248, 252, 255);
+    border-bottom: 1px solid rgb(219, 224, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    margin: 0;
+    padding: 0;
+}
+
+
+#nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*내용이 넘치면 숨김 overflow: hidden*/
+    overflow: hidden;
+}
+
+#nav-menu li {
+    float : left; /*좌측 정렬*/
+}
+
+#nav-menu li a {
+    display: block; /* 링크를 블록으로 */
+    text-align: center; /*텍스트는 블록의 중심*/
+    padding: 14px 14px;
+    text-decoration: none; /*링크의 밑줄 제거*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #90C3C7;
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#nav-menu li a:hover {
+    background-color: aliceblue;
+    color: #90C3C7;
+    font-weight: bold;
+}
+
+/* 햄버거 메뉴 스타일 설정 */
+#hamburger-menu {
+    display: none; /* 기본 상태에서는 햄버거 메뉴 숨김 */
+    cursor: pointer; /* 마우스 오버 시 포인터 모양 변경 */
+    padding: 10px;
+}
+
+/* 햄버거 메뉴 아이콘 스타일 (세 개의 가로줄) */
+#hamburger-menu div {
+    width: 25px; /* 가로줄 너비 */
+    height: 2px; /* 가로줄 높이 */
+    background-color: #90C3C7; 
+    margin: 6px 0; /* 상하 마진 설정 (줄 간격) */
+}
+
+
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-base);
+    color: var(--color-text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+}
+
+.section-title {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-md);
+    margin-left: var(--spacing-md);
+    align-self: flex-start;
+}
+
+.card-quote-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+    margin-top: 60px;
+}
+
+.card {
+    width: 470px;
+    height: 680px;
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-lg) 40px;
+    border-radius: var(--border-radius-card);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 400px;
+    top: 190px;
+    left: 130px;
+    margin: 100px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+ 
+.profile-image {
+    width: 270px;
+    border-radius: 50%;
+    margin-top: 32px;
+}
+
+.info-section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: baseline;
+    margin-bottom: var(--spacing-sm);
+}
+
+.label {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    margin-top: var(--spacing-md);
+    text-align: center;
+}
+
+.value {
+    font-weight: bold;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-md);
+}
+  
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin : var(--spacing-sm) var(--spacing-md);
+    justify-content: center;
+}
+  
+.tag {
+    display: inline-block;
+    background-color: var(--color-tag);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-tag);
+    font-size: var(--font-size-small);
+    margin: var(--spacing-sm);
+    color: #5B5E5E;
+}
+
+.quote-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 500px;
+}
+
+.quote {
+    font-size: var(--font-size-base);
+    text-align: center;
+    color: var(--color-text-main);
+    margin: var(--spacing-md) 0;
+}
+  
+.quote strong {
+    display: block;
+    margin-top: var(--spacing-sm);
+    font-weight: bold;
+}
+  
+.quote.highlight {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.about-container {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 150px;
+}
+
+.about-image-block {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.about-image{
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 75px;
+    left: 50px;
+    width: 200px;
+    height: auto;
+}
+
+.circle {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.about-text-block {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+    gap: var(--spacing-lg);
+}
+
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.about-line-wrapper {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    position: relative;
+}
+
+.about-line {
+    width: 4px;
+    height: auto;
+    background-color: var(--color-primary);
+    min-height: 150px;
+}
+
+.about-section p{
+    margin: 0;
+    line-height: 1.6;
+    font-size: var(--font-size-small);
+}
+
+.folder {
+    display: flex;
+    height: 300px;
+    align-items: center;
+}
+
+.ui-circle-block {
+    display: flex;
+}
+
+.circle1 {
+    width: 800px;
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid var(--color-primary);
+}
+
+.circle2 {
+    width: 800px;
+    height: auto;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* 미디어 쿼리를 사용한 반응형 디자인 설정 */
+@media screen and (max-width: 600px) {
+    #nav-menu {
+        display: none; /* 초기 상태에서는 숨김 */
+        width: 100%; /* 메뉴바 전체 너비 */
+        background-color: rgb(248, 252, 255); /* 배경색 */
+    }
+    #nav-menu li {
+        float: none; /* 세로 정렬을 위해 float 제거 */
+        width: 100%; /* 각 항목 전체 너비 */
+    }
+
+    #nav-menu li a {
+        text-align: left; /* 텍스트 왼쪽 정렬 */
+    }
+
+    #hamburger-menu {
+        display: block; /* 햄버거 메뉴 표시 */
+    }
+
+    .card-quote-wrapper {
+        flex-direction:column;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+
+    .card, .quote-box {
+        width: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .profile-image{
+        width: 180px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    .tag {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .label, .value {
+        font-size: 20px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .about-text-block {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-line-wrapper {
+        flex-direction: row;
+    }
+
+    .about-line {
+        height: 4px;
+        width: 40px;
+    }
+
+    .circle {
+        position: static;
+        margin: var(--spacing-md) auto;
+    }
+}
